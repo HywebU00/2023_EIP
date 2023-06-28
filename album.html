@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>原住民族委員會</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <style>
+      .indexMain {
+        display: flex;
+        flex-direction: column;
+      }
+      .albumBox {
+        height: 70vh;
+      }
+    </style>
+  </head>
+  <body class="innerPage">
+    <div class="wrapper">
+      <header>
+        <script src="./include/Menu.js"></script>
+      </header>
+      <main class="indexMain pageProject">
+        <table>
+          <tbody>
+            <tr>
+              <td><img src="./images/album_01.png" alt="" class="wow fadeInDown" data-wow-delay="0s" /></td>
+              <td style="text-align: right"><img src="./images/album_02.png" alt="" class="wow fadeInDown" data-wow-delay="0s" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="albumBox">
+          <div class="content">
+            <img src="./images/album_03.png" alt="" />
+          </div>
+        </div>
+        <div class="copyright">2023 © 原住民族委員會版權所有</div>
+        <!-- <footer>
+          <div class="footerBox">
+            <div class="container">
+              <div class="logo"><a href="#"></a></div>
+              <nav>
+                <ul></ul>
+              </nav>
+              <div class="copyright">All Rights Reserved by TAITRA 2023</div>
+            </div>
+          </div>
+        </footer> -->
+      </main>
+    </div>
+    <div class="lightBoxOuter">
+      <div class="lightBox">
+        <div class="content">
+          <div class="img"><img src="./images/lightBox.jpg" alt="" /> <button class="send"></button></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const pageTitle = document.querySelector('.pageTitle');
+      pageTitle.innerHTML = '相簿管理';
+      const project = document.querySelector('[href="album.html"]');
+      project.parentElement.classList.add('active');
+    </script>
+  </body>
+</html>
