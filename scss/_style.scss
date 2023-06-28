@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    background: url('../images/bg.jpg') center no-repeat;
+    background: url('../images/bg.jpg') left no-repeat;
   }
   &.innerPage {
     &::before {
@@ -280,7 +280,6 @@ header {
               content: '';
               width: 27px;
               aspect-ratio: 1;
-              background: $mainColor;
               display: block;
               flex-shrink: 0;
             }
@@ -291,15 +290,18 @@ header {
           $max: 9;
           @for $i from 1 through $max {
             &:nth-child(#{$i}) a::before {
-              mask: url('../images/icon/icon_0#{$i}.svg') no-repeat;
+              background: url('../images/icon/icon_menu_0#{$i}.png') no-repeat;
+            }
+
+            &:nth-child(#{$i}).active > a,
+            &:nth-child(#{$i}) a:hover {
+              &::before {
+                background: url('../images/icon/icon_menu_w_0#{$i}.png') no-repeat;
+              }
             }
           }
-          &.active > a,
           a:hover {
             background-color: #cc7258;
-            &::before {
-              background: #fff;
-            }
           }
         }
       }
@@ -363,7 +365,7 @@ main {
   width: 440px;
   position: fixed;
   bottom: 0;
-  right: 80px;
+  left: 1400px;
   border-radius: 20px 20px 0 0;
   padding: 10px 20px 5px;
   background: rgba(51, 25, 25, 0.9);

@@ -573,7 +573,7 @@ body::before {
   top: 0;
   left: 0;
   height: 100vh;
-  background: url("../images/bg.jpg") center no-repeat;
+  background: url("../images/bg.jpg") left no-repeat;
 }
 body.innerPage::before {
   background: url("../images/bg_in.jpg") center no-repeat;
@@ -830,7 +830,6 @@ header .sideMenu nav > ul > li > a::before {
   content: "";
   width: 27px;
   aspect-ratio: 1;
-  background: #180707;
   display: block;
   flex-shrink: 0;
 }
@@ -838,48 +837,61 @@ header .sideMenu nav > ul > li > a span {
   display: none;
 }
 header .sideMenu nav > ul > li:nth-child(1) a::before {
-  -webkit-mask: url("../images/icon/icon_01.svg") no-repeat;
-          mask: url("../images/icon/icon_01.svg") no-repeat;
+  background: url("../images/icon/icon_menu_01.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(1).active > a::before, header .sideMenu nav > ul > li:nth-child(1) a:hover::before {
+  background: url("../images/icon/icon_menu_w_01.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(2) a::before {
-  -webkit-mask: url("../images/icon/icon_02.svg") no-repeat;
-          mask: url("../images/icon/icon_02.svg") no-repeat;
+  background: url("../images/icon/icon_menu_02.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(2).active > a::before, header .sideMenu nav > ul > li:nth-child(2) a:hover::before {
+  background: url("../images/icon/icon_menu_w_02.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(3) a::before {
-  -webkit-mask: url("../images/icon/icon_03.svg") no-repeat;
-          mask: url("../images/icon/icon_03.svg") no-repeat;
+  background: url("../images/icon/icon_menu_03.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(3).active > a::before, header .sideMenu nav > ul > li:nth-child(3) a:hover::before {
+  background: url("../images/icon/icon_menu_w_03.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(4) a::before {
-  -webkit-mask: url("../images/icon/icon_04.svg") no-repeat;
-          mask: url("../images/icon/icon_04.svg") no-repeat;
+  background: url("../images/icon/icon_menu_04.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(4).active > a::before, header .sideMenu nav > ul > li:nth-child(4) a:hover::before {
+  background: url("../images/icon/icon_menu_w_04.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(5) a::before {
-  -webkit-mask: url("../images/icon/icon_05.svg") no-repeat;
-          mask: url("../images/icon/icon_05.svg") no-repeat;
+  background: url("../images/icon/icon_menu_05.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(5).active > a::before, header .sideMenu nav > ul > li:nth-child(5) a:hover::before {
+  background: url("../images/icon/icon_menu_w_05.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(6) a::before {
-  -webkit-mask: url("../images/icon/icon_06.svg") no-repeat;
-          mask: url("../images/icon/icon_06.svg") no-repeat;
+  background: url("../images/icon/icon_menu_06.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(6).active > a::before, header .sideMenu nav > ul > li:nth-child(6) a:hover::before {
+  background: url("../images/icon/icon_menu_w_06.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(7) a::before {
-  -webkit-mask: url("../images/icon/icon_07.svg") no-repeat;
-          mask: url("../images/icon/icon_07.svg") no-repeat;
+  background: url("../images/icon/icon_menu_07.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(7).active > a::before, header .sideMenu nav > ul > li:nth-child(7) a:hover::before {
+  background: url("../images/icon/icon_menu_w_07.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(8) a::before {
-  -webkit-mask: url("../images/icon/icon_08.svg") no-repeat;
-          mask: url("../images/icon/icon_08.svg") no-repeat;
+  background: url("../images/icon/icon_menu_08.png") no-repeat;
+}
+header .sideMenu nav > ul > li:nth-child(8).active > a::before, header .sideMenu nav > ul > li:nth-child(8) a:hover::before {
+  background: url("../images/icon/icon_menu_w_08.png") no-repeat;
 }
 header .sideMenu nav > ul > li:nth-child(9) a::before {
-  -webkit-mask: url("../images/icon/icon_09.svg") no-repeat;
-          mask: url("../images/icon/icon_09.svg") no-repeat;
+  background: url("../images/icon/icon_menu_09.png") no-repeat;
 }
-header .sideMenu nav > ul > li.active > a,
+header .sideMenu nav > ul > li:nth-child(9).active > a::before, header .sideMenu nav > ul > li:nth-child(9) a:hover::before {
+  background: url("../images/icon/icon_menu_w_09.png") no-repeat;
+}
 header .sideMenu nav > ul > li a:hover {
   background-color: #cc7258;
-}
-header .sideMenu nav > ul > li.active > a::before,
-header .sideMenu nav > ul > li a:hover::before {
-  background: #fff;
 }
 header .sideMenu nav ul ul {
   display: none;
@@ -938,7 +950,7 @@ main {
   width: 440px;
   position: fixed;
   bottom: 0;
-  right: 80px;
+  left: 1400px;
   border-radius: 20px 20px 0 0;
   padding: 10px 20px 5px;
   background: rgba(51, 25, 25, 0.9);
@@ -1019,11 +1031,22 @@ table tr {
   border: none;
 }
 table tr td {
+  text-align: left;
   line-height: 0;
   border: none;
   position: relative;
 }
 table img {
+  line-height: 0;
+}
+
+.blockBox {
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.blockBox .block {
+  position: relative;
   line-height: 0;
 }
 

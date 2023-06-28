@@ -5,12 +5,22 @@ table {
   tr {
     border: none;
     td {
+      text-align: left;
       line-height: 0;
       border: none;
       position: relative;
     }
   }
   img {
+    line-height: 0;
+  }
+}
+.blockBox {
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  .block {
+    position: relative;
     line-height: 0;
   }
 }
