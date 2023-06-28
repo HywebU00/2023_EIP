@@ -223,7 +223,6 @@ table {
   justify-content: center;
   align-items: center;
   .lightBox {
-    width: 48%;
     background: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -237,6 +236,7 @@ table {
   }
   .lightBox {
     padding: 50px;
+    padding-left: 120px;
     display: flex;
     justify-content: flex-end;
     .content {

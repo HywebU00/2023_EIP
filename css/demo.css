@@ -984,8 +984,8 @@ main {
   width: 70px;
   aspect-ratio: 1;
   display: block;
-  right: 9px;
-  top: 34px;
+  right: 9.5px;
+  top: 34.5px;
   z-index: 99;
   background: url("../images/icon/icon_bell.png") center no-repeat;
   opacity: 0;
@@ -1250,7 +1250,6 @@ table img {
   align-items: center;
 }
 .lightBoxOuter .lightBox {
-  width: 48%;
   background: #fff;
   border-radius: 20px;
   padding: 20px;
@@ -1265,6 +1264,7 @@ table img {
 }
 .popup .lightBox {
   padding: 50px;
+  padding-left: 120px;
   display: flex;
   justify-content: flex-end;
 }
