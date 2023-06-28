@@ -32,7 +32,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="albumBox">
+        <div class="albumBox wow fadeInUp" data-wow-delay="0.2s">
           <div class="content">
             <img src="./images/album_03.png" alt="" />
           </div>
@@ -58,9 +58,9 @@
         </div>
       </div>
     </div>
+    <script src="./plugins/WOW-master/dist/wow.min.js"></script>
+    <script src="./plugins/_base.js"></script>
     <script>
-      const pageTitle = document.querySelector('.pageTitle');
-      pageTitle.innerHTML = '相簿管理';
       const project = document.querySelector('[href="album.html"]');
       project.parentElement.classList.add('active');
     </script>
