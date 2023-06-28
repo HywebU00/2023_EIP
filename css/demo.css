@@ -564,6 +564,7 @@ button:focus {
 
 body {
   min-height: 100vh;
+  background: #e2d1b4;
 }
 body::before {
   content: "";
@@ -576,7 +577,15 @@ body::before {
   background: url("../images/bg.jpg") left no-repeat;
 }
 body.innerPage::before {
-  background: url("../images/bg_in.jpg") center no-repeat;
+  background: url("../images/bg_in.jpg") left no-repeat;
+}
+body.innerPage main {
+  min-width: 1670px;
+  max-width: 1670px;
+}
+body.innerPage.menuOpen main {
+  min-width: 1500px;
+  max-width: 1500px;
 }
 body.menuOpen header {
   width: 330px;
@@ -600,7 +609,7 @@ body.menuOpen header nav {
   margin: 10px 0;
 }
 body.menuOpen header nav > ul > li {
-  margin: 0 5px 10px 0;
+  margin: 0 5px 0px 0;
 }
 body.menuOpen header nav > ul > li.next-lv > a {
   padding-right: 30px;
@@ -620,7 +629,6 @@ body.menuOpen header nav > ul > li.next-lv > a::after {
   pointer-events: none;
 }
 body.menuOpen header nav > ul > li a {
-  margin-bottom: 5px;
   width: auto;
   height: auto;
   justify-content: flex-start;
@@ -698,7 +706,6 @@ body.menuOpen header .account .logout::after {
   background: #fff;
 }
 body.menuOpen main {
-  width: calc(100% - 420px);
   margin: 0 0px 0 360px;
 }
 
@@ -890,6 +897,7 @@ header .sideMenu nav > ul > li:nth-child(9) a::before {
 header .sideMenu nav > ul > li:nth-child(9).active > a::before, header .sideMenu nav > ul > li:nth-child(9) a:hover::before {
   background: url("../images/icon/icon_menu_w_09.png") no-repeat;
 }
+header .sideMenu nav > ul > li.active > a,
 header .sideMenu nav > ul > li a:hover {
   background-color: #cc7258;
 }
@@ -964,9 +972,10 @@ main {
   width: 56px;
   aspect-ratio: 1;
   display: block;
-  right: 15%;
-  top: 33%;
+  right: 220px;
+  top: 40px;
   z-index: 99;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -975,8 +984,8 @@ main {
   width: 70px;
   aspect-ratio: 1;
   display: block;
-  right: 1%;
-  top: 29%;
+  right: 9px;
+  top: 34px;
   z-index: 99;
   background: url("../images/icon/icon_bell.png") center no-repeat;
   opacity: 0;
@@ -1003,8 +1012,8 @@ main {
   width: 60px;
   aspect-ratio: 1;
   display: block;
-  right: 6%;
-  top: 34%;
+  right: 80px;
+  top: 40px;
   z-index: 99;
   opacity: 0;
   cursor: pointer;
@@ -1041,6 +1050,7 @@ table img {
 }
 
 .blockBox {
+  min-width: 1500px;
   max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
@@ -1205,7 +1215,7 @@ table img {
 }
 .pageProject .listBox .bottomBox .caseNumber.noticeColor::before,
 .pageProject .listBox .bottomBox time.noticeColor::before {
-  background: #ff4e00;
+  background: url("../images/icon/icon_time_o.png") center no-repeat;
 }
 .pageProject .listBox .bottomBox .caseNumber::before,
 .pageProject .listBox .bottomBox time::before {
@@ -1215,14 +1225,10 @@ table img {
   position: absolute;
   left: 0;
   top: 5px;
-  -webkit-mask: url("../images/icon/icon_11.svg") center no-repeat;
-          mask: url("../images/icon/icon_11.svg") center no-repeat;
-  background: #8e8e8e;
+  background: url("../images/icon/icon_time.png") center no-repeat;
 }
 .pageProject .listBox .bottomBox .caseNumber::before {
-  -webkit-mask: url("../images/icon/icon_12.svg") center no-repeat;
-          mask: url("../images/icon/icon_12.svg") center no-repeat;
-  background: #8e8e8e;
+  background: url("../images/icon/icon_number.png") center no-repeat;
 }
 .pageProject .originPosition {
   background: #f6e3dc !important;
@@ -1244,7 +1250,7 @@ table img {
   align-items: center;
 }
 .lightBoxOuter .lightBox {
-  width: 75%;
+  width: 48%;
   background: #fff;
   border-radius: 20px;
   padding: 20px;
@@ -1287,6 +1293,7 @@ table img {
 }
 .popup .lightBox .content .img {
   position: relative;
+  text-align: center;
 }
 .popup .lightBox .content button {
   cursor: pointer;

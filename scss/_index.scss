@@ -16,6 +16,7 @@ table {
   }
 }
 .blockBox {
+  min-width: 1500px;
   max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +183,7 @@ table {
         &.noticeColor {
           color: #ff4e00;
           &::before {
-            background: #ff4e00;
+            background: url('../images/icon/icon_time_o.png') center no-repeat;
           }
         }
         &::before {
@@ -192,14 +193,12 @@ table {
           position: absolute;
           left: 0;
           top: 5px;
-          mask: url('../images/icon/icon_11.svg') center no-repeat;
-          background: #8e8e8e;
+          background: url('../images/icon/icon_time.png') center no-repeat;
         }
       }
       .caseNumber {
         &::before {
-          mask: url('../images/icon/icon_12.svg') center no-repeat;
-          background: #8e8e8e;
+          background: url('../images/icon/icon_number.png') center no-repeat;
         }
       }
     }
@@ -224,7 +223,7 @@ table {
   justify-content: center;
   align-items: center;
   .lightBox {
-    width: 75%;
+    width: 48%;
     background: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -264,6 +263,7 @@ table {
       }
       .img {
         position: relative;
+        text-align: center;
       }
       button {
         cursor: pointer;

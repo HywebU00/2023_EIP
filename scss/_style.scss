@@ -8,6 +8,7 @@ $mainColor: #180707;
 
 body {
   min-height: 100vh;
+  background: #e2d1b4;
   &::before {
     content: '';
     position: fixed;
@@ -20,7 +21,17 @@ body {
   }
   &.innerPage {
     &::before {
-      background: url('../images/bg_in.jpg') center no-repeat;
+      background: url('../images/bg_in.jpg') left no-repeat;
+    }
+    main {
+      min-width: 1670px;
+      max-width: 1670px;
+    }
+    &.menuOpen {
+      main {
+        min-width: 1500px;
+        max-width: 1500px;
+      }
     }
   }
   &.menuOpen {
@@ -44,7 +55,7 @@ body {
       nav {
         margin: 10px 0;
         & > ul > li {
-          margin: 0 5px 10px 0;
+          margin: 0 5px 0px 0;
           &.next-lv {
             & > a {
               padding-right: 30px;
@@ -65,7 +76,6 @@ body {
             }
           }
           a {
-            margin-bottom: 5px;
             width: auto;
             height: auto;
             justify-content: flex-start;
@@ -150,7 +160,6 @@ body {
       }
     }
     main {
-      width: calc(100% - 420px);
       margin: 0 0px 0 360px;
     }
   }
@@ -300,6 +309,7 @@ header {
               }
             }
           }
+          &.active > a,
           a:hover {
             background-color: #cc7258;
           }
@@ -381,9 +391,10 @@ main {
   width: 56px;
   aspect-ratio: 1;
   display: block;
-  right: 15%;
-  top: 33%;
+  right: 220px;
+  top: 40px;
   z-index: 99;
+  opacity: 0;
   cursor: pointer;
 }
 
@@ -392,8 +403,8 @@ main {
   width: 70px;
   aspect-ratio: 1;
   display: block;
-  right: 1%;
-  top: 29%;
+  right: 9px;
+  top: 34px;
   z-index: 99;
   background: url('../images/icon/icon_bell.png') center no-repeat;
   opacity: 0;
@@ -419,8 +430,8 @@ main {
   width: 60px;
   aspect-ratio: 1;
   display: block;
-  right: 6%;
-  top: 34%;
+  right: 80px;
+  top: 40px;
   z-index: 99;
   opacity: 0;
   cursor: pointer;
