@@ -588,6 +588,7 @@ body.innerPage.menuOpen main {
   max-width: 1500px;
 }
 body.menuOpen header {
+  z-index: 99;
   width: 330px;
   padding: 0 0px 24px;
 }
