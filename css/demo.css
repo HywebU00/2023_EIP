@@ -696,15 +696,21 @@ body.menuOpen header .account .infoBox {
   display: block;
 }
 body.menuOpen header .account .logout {
-  width: auto;
-  height: auto;
+  width: 50px;
+  height: 50px;
   padding: 0;
   border: none;
   margin: 0 0 0 auto;
   background: none;
 }
 body.menuOpen header .account .logout::after {
-  background: #fff;
+  background: url("../images/icon/icon_logout_w.png") no-repeat;
+}
+body.menuOpen header .account .logout:hover {
+  background-color: #fff;
+}
+body.menuOpen header .account .logout:hover::after {
+  background: url("../images/icon/icon_logout.png") no-repeat;
 }
 body.menuOpen main {
   margin: 0 0px 0 360px;
@@ -931,21 +937,20 @@ header .account .logout {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: none;
 }
 header .account .logout::after {
   content: "";
   width: 29px;
   display: block;
   aspect-ratio: 1;
-  -webkit-mask: url("../images/icon/icon_10.svg") no-repeat;
-          mask: url("../images/icon/icon_10.svg") no-repeat;
-  background: #cc7258;
+  background: url("../images/icon/icon_logout.png") no-repeat;
 }
 header .account .logout:hover {
   background-color: #cc7258;
 }
 header .account .logout:hover::after {
-  background: #fff;
+  background: url("../images/icon/icon_logout_w.png") no-repeat;
 }
 
 main {

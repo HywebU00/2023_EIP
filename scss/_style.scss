@@ -148,14 +148,20 @@ body {
         }
 
         .logout {
-          width: auto;
-          height: auto;
+          width: 50px;
+          height: 50px;
           padding: 0;
           border: none;
           margin: 0 0 0 auto;
           background: none;
           &::after {
-            background: #fff;
+            background: url('../images/icon/icon_logout_w.png') no-repeat;
+          }
+          &:hover {
+            background-color: #fff;
+            &::after {
+              background: url('../images/icon/icon_logout.png') no-repeat;
+            }
           }
         }
       }
@@ -346,18 +352,18 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      background: none;
       &::after {
         content: '';
         width: 29px;
         display: block;
         aspect-ratio: 1;
-        mask: url('../images/icon/icon_10.svg') no-repeat;
-        background: #cc7258;
+        background: url('../images/icon/icon_logout.png') no-repeat;
       }
       &:hover {
         background-color: #cc7258;
         &::after {
-          background: #fff;
+          background: url('../images/icon/icon_logout_w.png') no-repeat;
         }
       }
     }
